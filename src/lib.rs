@@ -9,7 +9,7 @@ module!(Cslrb);
 methods!(
     Cslrb,
     _itself,
-    fn perform(cbor_hex: RString) -> RString {
+    fn tx_body_from_hex(cbor_hex: RString) -> RString {
         let ruby_string = cbor_hex.map_err(|e| VM::raise_ex(e) ).unwrap();
         let transaction = Transaction::from_hex(&ruby_string.to_string()).unwrap();
         let transaction_body = transaction.body();
@@ -25,6 +25,6 @@ methods!(
 #[no_mangle]
 pub extern "C" fn Init_cslrb() {
     Module::from_existing("Cslrb").define(|itself| {
-        itself.def_self("perform", perform);
+        itself.def_self("tx_body_from_hex", tx_body_from_hex);
     });
 }

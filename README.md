@@ -26,11 +26,11 @@ Or install it yourself as:
 
 ## Usage
 
-`cslrb` currently provides a single method, `Cslrb::TransactionBody.from_hex` which accepts a string (TX CBOR as hex).
+`cslrb` currently provides a single method, `Cslrb.tx_body_from_hex` which accepts a string (TX CBOR as hex).
 
 ```shell
 pry(main)> cbor_hex = "84a40081825820f97da637cc2e8b5b970b1952bcdc62422e82873bb0503a75ab70ed3c3476e9cc010182825839010a7bc8293ae50dd74ae399b261446abff238ea7c564ad52a52168e0b8c6663f1d8c19ba014cf7357207946d54731f2535ae8720c667cdbbc1a000f42408258390177992ea7e2b434bd4ba92e3b2c9592c0805a4552e1d2bb7a7e9c726b4b3ff6604e58320d841aa3af6d4aca9583bd3741ec93518d973a498e1a022468b3021a0002917d031a05d25734a10081825820e41c3c43e11599b056d0de12a55ef49346bb941fcafef7aad08a7b3361b4ccf55840b1fb566bacc3c5f97748dd281f65abec51c64814c289ddcd2792e094091750755542ef4cea7d423a09066486fb2ce185da6fef380dbf65fcadb9bda6c697d701f5f6"
-pry(main)> Cslrb::TransactionBody.from_hex(cbor_hex)
+pry(main)> Cslrb.tx_body_from_hex(cbor_hex)
 =>  "{\n  \"inputs\": [\n    {\n      \"transaction_id\": \"f97da637cc2e8b5b970b1952bcdc62422e82873bb0503a75ab70ed3c3476e9c...
 ```
 
@@ -39,7 +39,7 @@ Passing anything other than a `String` will result in an error.
 ## Available Methods
 
 ```ruby
-Cslrb::TransactionBody.from_hex(cbor_hex)
+Cslrb.tx_body_from_hex(cbor_hex)
 ```
 
 ## Development

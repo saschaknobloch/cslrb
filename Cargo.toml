@@ -1,0 +1,15 @@
+[package]
+name = "cslrb"
+version = "0.1.0"
+authors = ["Sascha Knobloch <saschaknobloch.dev@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rutie = "0.8.2"
+cardano-serialization-lib = "11.4.0"
+
+[lib]
+name = "cslrb"
+crate-type = ["dylib"]

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    cslrb (0.1.0)
+    cslrb (0.2.0)
       rutie (~> 0.0.4)
       thermite (~> 0.13)
 
@@ -69,4 +69,4 @@ DEPENDENCIES
   rubocop (~> 1.54)
 
 BUNDLED WITH
-   2.2.22
+   2.4.17

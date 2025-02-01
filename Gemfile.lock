@@ -1,7 +1,11 @@
 PATH
   remote: .
   specs:
+<<<<<<< Updated upstream
     cslrb (0.1.0)
+=======
+    cslrb (0.3.0)
+>>>>>>> Stashed changes
       rutie (~> 0.0.4)
       thermite (~> 0.13)
 

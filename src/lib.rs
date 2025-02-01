@@ -2,6 +2,7 @@
 extern crate rutie;
 
 use cardano_serialization_lib::{Transaction};
+use cardano_serialization_lib::{PlutusData, PlutusDatumSchema};
 use rutie::{Module, Object, RString, VM};
 
 module!(Cslrb);
